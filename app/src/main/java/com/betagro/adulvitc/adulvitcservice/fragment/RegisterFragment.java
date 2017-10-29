@@ -3,12 +3,13 @@ package com.betagro.adulvitc.adulvitcservice.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
-
 import com.betagro.adulvitc.adulvitcservice.MainActivity;
 import com.betagro.adulvitc.adulvitcservice.R;
 
@@ -43,7 +44,39 @@ public class RegisterFragment extends Fragment{
             @Override
             public void onClick(View v) {
 
-            }
+//              Get Value from Edit text ( การผูกตัวแปร )
+                EditText nameEditText = getView().findViewById(R.id.edtName);
+                EditText userEditText = getView().findViewById(R.id.edtUser);
+                EditText passwordEditText = getView().findViewById(R.id.edtPassword);
+
+
+//              Change Type Value to String ( การแปลงตัวแปรจาก EditText เป็น String )
+                nameString = nameEditText.getText().toString().trim();
+                userString = userEditText.getText().toString().trim();
+                passwordString = passwordEditText.getText().toString().trim();
+
+
+//              Check Space ( สิ่งที่กรอกมีความว่างเปล่าอยู่หรือไม่ )
+                if (nameString.equals("") || userString.equals("") || passwordString.equals("")) {
+//                    Have Space ( ภาวะที่เป็น True )
+
+
+
+
+
+                } else {
+//                    No Space ( ภาวะที่เป็น False )
+
+
+                }
+
+
+
+
+
+
+
+            }   //Onclick
         });
 
     }
